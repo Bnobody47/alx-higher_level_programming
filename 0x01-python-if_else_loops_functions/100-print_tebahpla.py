@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-strtmp = ""
-for i in reversed(range(97, 123)):
-    if (i % 2) == 0:
-        strtmp += chr(i)
-    else:
-        strtmp += char(i-32)
-print("{}".format(strtmp), end="")
+i = 0
+for c in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(char(c - i)), end="")
+    i = 32 if i == 0 else 0
