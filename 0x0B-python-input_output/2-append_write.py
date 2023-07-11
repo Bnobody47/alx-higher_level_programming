@@ -1,12 +1,17 @@
 #!/usr/bin/python3
+"""
+append_write module
+"""
 
 
-def read_lines(filename="", nb_lines=0):
-    """reads n lines from file and prints to stdout
+def append_write(filename="", text=""):
     """
-    printed = 0
-    with open(filename, encoding='utf-8') as myFile:
-        for line in myFile:
-            if printed < nb_lines or nb_lines <= 0:
-                print(line, end='')
-                printed += 1
+    write_file - appends a string at the end of a text file (UTF8),
+                and returns the number of characters added:
+    Args:
+        filename: name of the file
+        text: text to be written
+    Return: number of bytes written.
+    """
+    with open(filename, mode="a", encoding="UTF-8") as f:
+        return (f.write(text))
